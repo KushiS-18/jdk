@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url:'https://github.com/Naveen04jan/ven.git',
+                git branch: 'master', https://github.com/KushiS-18/jdk.git',
                 credentialsId: 'github-token'
             }
         }
