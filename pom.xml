@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example.app</groupId>
-  <artifactId>demo-app1</artifactId>
+  <artifactId>demo-app</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>demo-app1</name>
+  <name>demo-app</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -24,7 +24,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 
     <!-- Logging -->
     <dependency>
-<groupId>org.slf4j</groupId>
+        <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>2.0.9</version>
     </dependency>
@@ -39,7 +39,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 
   </dependencies>
 <build>
-<plugins>
+    <plugins>
 
         <!-- Compiler Plugin -->
         <plugin>
@@ -47,11 +47,19 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.11.0</version>
             <configuration>
-                <source>21</source>
-                <target>21</target>
+                <source>17</source>
+                <target>17</target>
             </configuration>
-</plugin>
+        </plugin>
 
+    
+    
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+        </plugin>
+    
         <!-- Test Plugin -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -62,5 +70,3 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     </plugins>
 </build>
 </project>
-
-
